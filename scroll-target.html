@@ -1,0 +1,17 @@
+<link rel="import" href="scroll-target-mixin.html">
+
+<dom-module id="scroll-target">
+    <script>
+        class ScrollTarget extends ScrollTargetMixin(HTMLElement) {
+            static get is() {
+                return 'scroll-target';
+            }
+
+            connectedCallback() {
+                this.setTopOffset(this.getAttribute('top-offset') || 0);
+            }
+        }
+
+        customElements.define(ScrollTarget.is, ScrollTarget);
+    </script>
+</dom-module>

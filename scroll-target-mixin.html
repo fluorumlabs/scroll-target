@@ -1,0 +1,64 @@
+<link rel="import" href="bower_components/smoothscroll/dist/smoothscroll.js">
+
+<script>
+    {
+        ScrollTargetMixin = (base) => class extends base {
+            /**
+             * Set offset from top (to make some space for fixed menu)
+             */
+            setTopOffset(offset) {
+                this._scrollTopOffset = offset;
+            }
+
+			/**
+             * Make element visible on screen by scrolling
+             *
+             * @param deferBy (Optional) delay in milliseconds before scrolling
+             */
+            ensureVisibility(deferBy) {
+                if (this._scrollTargetTimer) {
+                    window.clearTimeout(this._scrollTargetTimer);
+                    this._scrollTargetTimer = null;
+                }
+                if ( deferBy === undefined ) {
+                    this._ensureVisibility();
+                } else {
+                    this._scrollTargetTimer = window.setTimeout(() => this._ensureVisibility(), deferBy);
+                }
+            }
+
+            /**
+             *
+             */
+            _ensureVisibility() {
+                let cbr = this.getBoundingClientRect();
+
+                let y = cbr.y - ((window.innerHeight || document.documentElement.clientHeight) - cbr.height) + this._scrollTopOffset;
+                if ((window.innerHeight || document.documentElement.clientHeight) < cbr.height + this._scrollTopOffset || y < 0) {
+                    y = cbr.y - this._scrollTopOffset;
+                }
+                if (!this._isElementInViewport()) {
+                    window.scrollBy({
+                        top: y,
+                        left: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+
+			/**
+             * Returns `true` if element is visible in viewport
+             */
+            _isElementInViewport() {
+                let rect = this.getBoundingClientRect();
+
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom + this._scrollTopOffset <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+        };
+    }
+</script>
