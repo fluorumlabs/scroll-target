@@ -27,14 +27,19 @@ ll you need to do is to wrap the content you want to scroll to and call `ensureV
 ## Methods
 
 ```javascript
-scrollTargetElement.setTopOffset(<offset-in-pixels>);
+scrollTargetElement.setTopOffset(<offset_in_pixels>);
 ```
 
 `setTopOffset` defines a space that should be reserved for fixed top menu when scrolling. Can be set via `top-offset` attribute.
 
 ```javascript
-scrollTargetElement.ensureVisibility(<delay-in-milliseconds>);
+scrollTargetElement.ensureVisibility(<delay_in_milliseconds>);
 ```
 
-`ensureVisibility` scrolls to make the wrapped content visible. If optional `<delay-in-milliseconds>` is specified, scrolling will be delayed by specified amount of time.
+`ensureVisibility` scrolls to make the wrapped content visible. If optional `<delay_in_milliseconds>` is specified, scrolling will be delayed by specified amount of time.
 
+# Getting started
+
+```bash
+bower install --save fluorumlabs/scroll-target"#^1.0.0"
+```
