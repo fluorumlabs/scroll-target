@@ -19,7 +19,7 @@ ll you need to do is to wrap the content you want to scroll to and call `ensureV
 ## Properties
 
 ```html
-<scroll-target top-offset="<offset-in-pixels>">
+<scroll-target top-offset="<offset_in_pixels>">
 ```
 
 `top-offset` defines a space that should be reserved for fixed top menu when scrolling. `0` by default. Can be changed in runtime by calling `scrollTargetElement.setTopOffset(...)`.
