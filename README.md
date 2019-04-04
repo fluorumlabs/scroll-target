@@ -1,6 +1,10 @@
-# &lt;scroll-target&gt;
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/fluorumlabs/scroll-target)
+[![Published on Vaadin  Directory](https://img.shields.io/badge/Vaadin%20Directory-published-00b4f0.svg)](https://vaadin.com/directory/component/fluorumlabsscroll-target)
+[![Latest version on vaadin.com/directory](https://img.shields.io/vaadin-directory/v/fluorumlabsscroll-target.svg)](https://vaadin.com/directory/component/fluorumlabsscroll-target)
+[![Rating on vaadin.com/directory](https://img.shields.io/vaadin-directory/rating/fluorumlabsscroll-target.svg)](https://vaadin.com/directory/component/fluorumlabsscroll-target)
+[![](https://data.jsdelivr.com/v1/package/gh/fluorumlabs/scroll-target/badge)](https://www.jsdelivr.com/package/gh/fluorumlabs/scroll-target)
 
-[Live Demo ↗]()
+# &lt;scroll-target&gt;
 
 &lt;scroll-target&gt; is a really simple web component for making scrolling easier. 
 ll you need to do is to wrap the content you want to scroll to and call `ensureVisibility()`:
@@ -40,6 +44,17 @@ scrollTargetElement.ensureVisibility(<delay_in_milliseconds>);
 
 # Getting started
 
+```html
+<link rel="import" href="//cdn.jsdelivr.net/gh/fluorumlabs/scroll-target@1.0.0/scroll-target.html">
+```
+
+Or, if you prefer having it locally,
+
 ```bash
 bower install --save fluorumlabs/scroll-target"#^1.0.0"
 ```
+
+```html
+<link rel="import" href="bower_components/scroll-target/scroll-target.html">
+```
+
