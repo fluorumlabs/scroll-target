@@ -20,6 +20,8 @@ ll you need to do is to wrap the content you want to scroll to and call `ensureV
 </scroll-target>
 ```
 
+![ScrollTarget demo recording](https://raw.githubusercontent.com/fluorumlabs/scroll-target-for-flow/master/demo-recording.gif)
+
 ## Properties
 
 ```html
