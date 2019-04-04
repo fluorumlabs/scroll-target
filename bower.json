@@ -1,28 +1,11 @@
 {
     "name": "scroll-target",
-    "authors": [
-      "Artem Godin <artem.godin@gmail.com>"
-    ],
+    "version": "1.0.0",
     "description": "<scroll-target>: Wrap things and make visible",
     "main": "scroll-target.html",
-    "keywords": [
-      "web",
-      "component",
-      "custom",
-      "element"
-    ],
     "license": "Apache-2.0",
-    "homepage": "",
-    "private": true,
-    "ignore": [
-      "**/.*",
-      "node_modules",
-      "bower_components",
-      "test",
-      "tests"
-    ],
     "dependencies": {
-      "smoothscroll": "0.3.6"
+      "smoothscroll": "^0.3.6"
     },
     "devDependencies": {
       "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
